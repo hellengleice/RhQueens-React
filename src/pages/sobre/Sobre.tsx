@@ -1,3 +1,4 @@
+import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 
 interface DevasSobre {
     nome: string;
@@ -5,55 +6,84 @@ interface DevasSobre {
     sobre: string;
     github: string;
     linkedin: string;
-}
+    }
 
-const devas: DevasSobre[] = [
 
+    function Sobre() {
+    const devas: DevasSobre[] = [
     {
-        nome: 'Isabela Santos',
-        imagem: '/isabela.png',
-        sobre: 'Biriribororo.',
-        github: 'link',
-        linkedin: 'Link'
+    nome: 'Evelyn Santos',
+    imagem: 'https://i.postimg.cc/KY3hmQBp/Design-sem-nome-5.png',
+    sobre: 'Desenvolvedora FullStack Java',
+    github: 'https://github.com/EvelynSantos6',
+    linkedin: 'https://www.linkedin.com/in/evelyn-santos-devti/'
     },
-
     {
-        nome: 'Isabela Santos',
-        imagem: '/isabela.png',
-        sobre: 'Biriribororo.',
-        github: 'link',
-        linkedin: 'Link'
-
+    nome: 'Hellen Gleice',
+    imagem: 'https://i.postimg.cc/CLnGHqCT/Design-sem-nome-9.png',
+    sobre: 'Desenvolvedora Fullstack.',
+    github: 'https://github.com/hellengleice',
+    linkedin: 'https://www.linkedin.com/in/hellenjr'
     },
-];                 
-
-function Sobre() {
+    {
+    nome: 'Thainara Cruz',
+    imagem: 'https://i.postimg.cc/x8CRSpbc/Design-sem-nome-7.png',
+    sobre: 'Desenvolvedora FullStack Java',
+    github: 'https://github.com/ThainaraCruz',
+    linkedin: 'http://www.linkedin.com/in/thainara-cruz-48183517b'
+    },
+    {
+    nome: 'Isabela Santos',
+    imagem: 'https://i.postimg.cc/RZXZWP3M/Design-sem-nome-4.png',
+    sobre: 'Desenvolvedora FullStack',
+    github: 'https://github.com/Isabela-prog',
+    linkedin: 'https://www.linkedin.com/in/isabela-santos-837541351/'
+    },
+    {
+    nome: 'Maytê Araujo',
+    imagem: 'https://i.postimg.cc/3RLX9jb7/Design-sem-nome-8.png',
+    sobre: 'Desenvolvedora Java Fullstack',
+    github: 'https://github.com/maytearaujo',
+    linkedin: 'https://www.linkedin.com/in/maytearaujo/'
+    },
+    {
+    nome: 'Abiqueila Souza',
+    imagem: 'https://i.postimg.cc/pLygBkGV/Design-sem-nome-6.png',
+    sobre: 'Densenvolvedora Java Fullstack.',
+    github: 'https://github.com/Abilafora',
+    linkedin: 'https://www.linkedin.com/in/abiqueila-souza/'
+    }];
 
     return (
-    {devas.map((deva, index) => (
-        <div>Sobre
-            <div className='border-4 border-fuchsia-800 rounded-2xl p-6 flex row items-center gap-4'>
-                <h2 className='text-fuchsia-600 text-xl font-bold text-center'>
-                </h2>
-                <p className='text-gray-700 text-center'>Desenvolvedoras
-                    {deva}
-                </p>
-                <p>Contato</p>
-                <div className='flex gap-1'>
-                    <a href="https://github.com/Abilafora/projeto_integrador_rh_queens_-front.git" target="_blank">
-                    <GithubLogo size={32} weight='bold' />
-                    </a>
-                </div> 
-
-                <div className='flex gap-1'>
-                    <a href="https://github.com/Abilafora/projeto_integrador_rh_queens_-front.git" target="_blank">
-                    <LinkedinLogo size={32} weight='bold' />
-                    </a>
-                </div> 
-            </div>
+        <div className="flex justify-center p-20">
+            {devas.map((deva, index) => (
+        <div className='border-4 border-green-700 rounded-2xl p-6 flex flex-col items-center gap-4 z'>
+            <h2 className='text-fuchsia-600 text-xl font-bold text-center'>{deva.nome}
+            </h2>
+            <p className='text-gray-700 text-center'>
+            </p>
+        <div> 
+            <img
+                src={deva.imagem}
+                alt={deva.nome}
+                    className='w-2/3'/>
         </div>
-        )
+
+        <div className='flex gap-2'>
+            <a href={deva.linkedin} target="_blank">
+            <LinkedinLogo size={32} weight='bold' />
+            </a>
+        </div> 
+
+        <div className='flex gap-2'>
+            <a href={deva.github} target="_blank">
+            <GithubLogo size={32} weight='bold' />
+            </a>
+        </div> 
+        </div>
+            ))}
+        </div>
     )
 }
 
-export default Sobre
+export default Sobre;
