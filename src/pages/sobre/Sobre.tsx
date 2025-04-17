@@ -69,7 +69,7 @@ interface DevasSobre {
         <p>✨ Seja bem-vindo à nova era do RH Queens.</p>
         </div>
         <div className="flex justify-center p-16 gap-4">
-            {devas.map((deva, index) => (
+            {devas.map((deva) => (
         <div className='border-4 border-green-700 rounded-2xl p-6 flex flex-col items-center gap-4'>
             <h2 className='text-emerald-800 text-xl font-bold text-center font-serif'>{deva.nome}
             </h2>
